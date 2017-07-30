@@ -1,0 +1,16 @@
+{
+  "name": "node-segment",
+  "version": "1.0.0",
+  "description": "旨在收集实用的Node.js相关代码段，在实际工程中调取。",
+  "main": "basic.js",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "iconv-lite": "^0.4.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

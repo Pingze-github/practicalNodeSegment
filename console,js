@@ -1,0 +1,55 @@
+// 输出
+console.log('a string');
+console.info('a string');  // 与log相同
+console.warn('a string'); // 打印红色字体。位置不确定
+console.error('a string'); // 打印红色字体。位置不确定
+
+// 计时
+console.time('timer');
+console.timeEnd('timer');
+
+// 字符串格式化
+// 1、仅在console.log()中有效。
+console.log('%s:%s', 11, 30);
+// 2、util
+const util = require('util');
+console.log(util.format('%s:%s', 11, 30));
+// 3、[ES6]模版字符串
+console.log(`${11}:${30}`);
+
+// JSON格式输出
+let data = {
+  alist: [1, 2, 3, 4],
+  type: 'int',
+  func: ()=>{}
+};
+console.log(data);
+console.log('%j', data); //转成一行的json字符串。忽略值类型function的属性
+
+
+// 输出调用栈，跟踪到stderr
+// console.trace('test');
+
+// 查看对象的属性和方法
+console.dir(data);
+
+// 结果评估
+console.assert(0 === 0, 'OK'); //false时报错
+
+// 读取输入
+const readline = require('readline');
+let rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('1+1=:\t', (ans) => {
+  if (parseInt(ans) === 2) {
+    console.log(`1+1=${ans}`);
+  } else {
+    rl.write('wrong!');
+    // 输入组合键，删除上一行
+    rl.write(null, {ctrl: true, name: 'u'}); // Ctrl+U
+  }
+});
+

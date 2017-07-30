@@ -1,0 +1,22 @@
+{
+  "name": "autoQuestionnaire",
+  "version": "1.0.0",
+  "description": "自动问卷填写系统",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wang719695@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.3",
+    "fs-extra": "^4.0.0",
+    "lodash": "^4.17.4",
+    "log4js": "^2.3.2",
+    "mongoose": "^4.11.4",
+    "request": "^2.81.0"
+  }
+}
